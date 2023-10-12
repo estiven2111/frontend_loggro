@@ -80,8 +80,9 @@ function TableInfo() {
     window.location.reload();
   };
   return (
-    <div className="pt-32 ">
-       <div className="content-center mb-11">
+    <div>
+    <div className="pt-32 pb-10">
+       <div className="content-center mb-11 border-b border-gray-900/10 pb-12">
        <p className="font-serif">Seleccione un rango de fechas para poder observar que información hay en dicho rango</p>
        </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 place-content-center text-center mb-12">
@@ -214,6 +215,7 @@ function TableInfo() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }
