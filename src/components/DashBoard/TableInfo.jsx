@@ -178,7 +178,7 @@ function TableInfo() {
                   </tr>
                 </thead>
                 <tbody>
-                  {userInfo?.map((info,) => (
+                  {infoUsers?.map((info,) => (
                     <>
                       <tr
                         key={info._id}
