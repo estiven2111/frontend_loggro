@@ -63,7 +63,7 @@ function FormImage() {
     ) {
       const formdata = new FormData(event.target);
       const response = await axios.post(
-        "/form/img",
+        "https://backend-loggro-production.up.railway.app/form/img",
         formdata
       );
     
@@ -132,41 +132,12 @@ function FormImage() {
             </h2>
 
             <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-              {/* <div className="col-span-full">
-              <label
-                htmlFor="photo"
-                className="block text-sm font-medium leading-6 text-gray-900"
-              >
-                Foto Perfil
-              </label>
-              <div className="mt-2 flex items-center gap-x-3">
-                <UserCircleIcon
-                  className="h-12 w-12 text-gray-300"
-                  aria-hidden="true"
-                />
-                <div className="mt-4 flex text-sm leading-6 text-gray-600">
-                  <label
-                    htmlFor="file-upload"
-                    className="relative cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500"
-                  >
-                    <span>Cambiar</span>
-                    <input
-                      id="file-upload"
-                      name="file-upload"
-                      type="file"
-                      className="sr-only"
-                    />
-                  </label>
-                </div>
-              </div>
-            </div> */}
-
               <div className="col-span-full">
                 <label
                   htmlFor="cover-photo"
                   className="block text-sm font-medium leading-6 text-gray-900"
                 >
-                  Selecciónar una Imagen
+                  Selecciona una Imagen
                 </label>
                 <div className="mt-2 flex justify-center rounded-lg border border-dashed border-gray-900/25 px-6 py-10">
                   <div className="text-center">
@@ -236,7 +207,7 @@ function FormImage() {
                     autoComplete="given-name"
                     placeholder="ingrese su nombre"
                     value={information.name}
-                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    className="text-center block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     onChange={handlerinformation}
                   />
                 </div>
@@ -257,7 +228,7 @@ function FormImage() {
                     autoComplete="lastname"
                     placeholder="Ingrese sus apellidos"
                     value={information.lastname}
-                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    className="text-center  block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     onChange={handlerinformation}
                   />
                 </div>
@@ -268,7 +239,7 @@ function FormImage() {
                   htmlFor="email"
                   className="block text-sm font-medium leading-6 text-gray-900"
                 >
-                  Correo
+                  Correo electronico
                 </label>
                 <div className="mt-2">
                   <input
@@ -276,9 +247,9 @@ function FormImage() {
                     name="email"
                     type="email"
                     autoComplete="email"
-                    placeholder="Ingrese su correo electronico"
+                    placeholder="Ingrese su correo "
                     value={information.email}
-                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    className="text-center  block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     onChange={handlerinformation}
                   />
                 </div>

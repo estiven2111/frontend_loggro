@@ -21,20 +21,26 @@ export const actividadesSlice = createSlice({
                 ...state,
                 infoUsers:action.payload
             }
+        },
+        GetHourUser(state,action){
+            return{
+                ...state,
+                infoUsers:action.payload
+            }
         }
     }
 })
 
 export const sendInfoUser = (formdata) =>{
     return async () =>{
-        const datos = (await axios.get(`http://localhost:3200/form/img`,formdata)).data;
+        const datos = (await axios.get(`/form/img`,formdata)).data;
         return datos
     }
 }
 
 export const infoUserSlice = () =>{
     return async (dispatch) =>{
-        const datos = (await axios.get(`http://localhost:3200/form/img`)).data;
+        const datos = (await axios.get(`/form/img`)).data;
         await dispatch(getInfoUser(datos))
         return datos
     }
@@ -42,11 +48,18 @@ export const infoUserSlice = () =>{
 export const DateUser = (startDate,endDate) =>{
     return async (dispatch) =>{
         const datos = (await axios.get(`/form/date?startDate=${startDate}&endDate=${endDate}`)).data;
-        console.log(datos,"datosssssssssss")
+        
         await dispatch(GetDateUser(datos))
         return datos
     }
 }
+export const HourUser = (Hour) =>{
+    return async (dispatch) =>{
+        const datos = (await axios.get(`/form/hour?hour=${Hour}`)).data;
+        await dispatch(GetHourUser(datos))
+        return datos
+    }
+}
 
-export const {getInfoUser,GetDateUser} = actividadesSlice.actions
+export const {getInfoUser,GetDateUser,GetHourUser} = actividadesSlice.actions
 export default actividadesSlice.reducer
