@@ -63,7 +63,7 @@ function FormImage() {
     ) {
       const formdata = new FormData(event.target);
       const response = await axios.post(
-        "https://backend-loggro-production.up.railway.app/form/img",
+        "/form/img",
         formdata
       );
     
@@ -125,11 +125,11 @@ function FormImage() {
   return (
     <div>
       <form onSubmit={handlerSend}>
-        <div className="space-y-12">
+        <div className="space-y-12 mt-36">
           <div className="border-b border-gray-900/10 pb-12">
-            <h2 className="text-base font-semibold leading-7 text-gray-900">
+            <h1 className="text-base font-semibold leading-7 text-gray-900">
               PRUEBA DESARROLLADORES FULL STACK
-            </h2>
+            </h1>
 
             <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
               <div className="col-span-full">
