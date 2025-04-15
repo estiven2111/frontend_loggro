@@ -10,9 +10,9 @@ const Footer = () => {
       <div className="flex-row items-center justify-center dark:from-transparent dark:to-slate-900 bg-gradient-to-b from-transparent to-slate-100">
         <div className="grid lg:grid-cols-3 grid-cols-1 gap-4 mb-4 items-center justify-center">
           <div className="px-5 lg:order-first text-center lg:text-md text-sm sm:order-last">
-            <h1>
+            <h2>
               <strong>Loggro</strong> Prueba Desarrollador Restobares
-            </h1>
+            </h2>
           </div>
           <div className="order-first">
             <Link to="/">

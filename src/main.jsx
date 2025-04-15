@@ -6,7 +6,9 @@ import { Provider } from 'react-redux'
 import axios from 'axios'
 import './index.css'
 
-axios.defaults.baseURL = "https://backend-loggro-production.up.railway.app"
+// axios.defaults.baseURL = "https://backend-loggro-production.up.railway.app"
+ axios.defaults.baseURL = "https://backend-loggro.onrender.com"
+//  axios.defaults.baseURL = "http://localhost:3200"
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Provider store={store}>
